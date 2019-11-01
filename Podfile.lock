@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.9.0)
+  - DateToolsSwift (4.0.0)
+  - Hex (6.1.0)
+  - PromiseKit (6.11.0):
+    - PromiseKit/CorePromise (= 6.11.0)
+    - PromiseKit/Foundation (= 6.11.0)
+    - PromiseKit/UIKit (= 6.11.0)
+  - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.11.0):
+    - PromiseKit/CorePromise
+  - PullToRefreshKit (0.8.8)
+
+DEPENDENCIES:
+  - Alamofire
+  - DateToolsSwift
+  - Hex
+  - PromiseKit
+  - PullToRefreshKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DateToolsSwift
+    - Hex
+    - PromiseKit
+    - PullToRefreshKit
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
+  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
+  PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
+
+PODFILE CHECKSUM: 81f2c5746886c8e443619da907e2884a8571facc
+
+COCOAPODS: 1.8.4
