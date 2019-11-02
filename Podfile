@@ -10,6 +10,7 @@ target 'cmc-demo' do
   pod 'Alamofire'
   pod 'PromiseKit'
   pod 'DateToolsSwift'
+  pod 'PopupDialog', '~> 1.0.0'
 
   target 'cmc-demoTests' do
     inherit! :search_paths

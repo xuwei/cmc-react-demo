@@ -17,10 +17,13 @@ class TradeHeaderViewCellViewModel: CTableViewCellViewModelProtocol {
     var identifier: String = "TradeHeaderTableViewCell"
     var currency: Currency = AppData.shared.currentCurrency
     var tradeType: TradeType = .buy
-    var price: PriceInfo = CmcServiceManager.shared.blockchainPrice(AppData.shared.currentCurrency.rawValue)
+    
+    func price()->PriceInfo {
+        return CmcServiceManager.shared.blockchainPrice(AppData.shared.currentCurrency.rawValue)
+    }
     
     func calculateSpread()->Double {
-        guard let buy = price.buy, let sell = price.sell else { return 0.0 }
+        guard let buy = price().buy, let sell = price().sell else { return 0.0 }
         return abs(buy - sell)
     }
 }

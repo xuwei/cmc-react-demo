@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		444DCBE8F9678BBA64EF6DF9 /* Pods_cmc_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8040A2F3DE5DD3250FAF5FD /* Pods_cmc_demoTests.framework */; };
+		9632E113236DE41100A2CB2E /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632E112236DE41100A2CB2E /* StringUtil.swift */; };
+		9632E116236DE83800A2CB2E /* CPopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632E115236DE83800A2CB2E /* CPopupDialog.swift */; };
+		9632E119236DEFA400A2CB2E /* NeonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632E117236DEFA300A2CB2E /* NeonTheme.swift */; };
 		967D7876236CF5B500438476 /* CLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D7875236CF5B500438476 /* CLabel.swift */; };
 		967D787B236CF91000438476 /* TradeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D7879236CF91000438476 /* TradeHeaderTableViewCell.swift */; };
 		967D787C236CF91000438476 /* TradeHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967D787A236CF91000438476 /* TradeHeaderTableViewCell.xib */; };
@@ -83,6 +86,9 @@
 		1FAE505017907CD992971236 /* Pods-cmc-demoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmc-demoTests.debug.xcconfig"; path = "Target Support Files/Pods-cmc-demoTests/Pods-cmc-demoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5793B018A80E6D27B217B3F7 /* Pods_cmc_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmc_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1EEF9007AEA70771449AFB /* Pods-cmc-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmc-demo.debug.xcconfig"; path = "Target Support Files/Pods-cmc-demo/Pods-cmc-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9632E112236DE41100A2CB2E /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		9632E115236DE83800A2CB2E /* CPopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPopupDialog.swift; sourceTree = "<group>"; };
+		9632E117236DEFA300A2CB2E /* NeonTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonTheme.swift; sourceTree = "<group>"; };
 		967D7875236CF5B500438476 /* CLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLabel.swift; sourceTree = "<group>"; };
 		967D7879236CF91000438476 /* TradeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		967D787A236CF91000438476 /* TradeHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TradeHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -190,6 +196,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9632E114236DE83800A2CB2E /* PopupMessage */ = {
+			isa = PBXGroup;
+			children = (
+				9632E115236DE83800A2CB2E /* CPopupDialog.swift */,
+			);
+			path = PopupMessage;
+			sourceTree = "<group>";
+		};
 		967D7874236CF59E00438476 /* Label */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +249,7 @@
 				967D78FC236D6CFE00438476 /* ViewStylingUtil.swift */,
 				967D78FE236D6E2100438476 /* FormatterUtil.swift */,
 				967D7913236DC57700438476 /* AutoLayoutUtil.swift */,
+				9632E112236DE41100A2CB2E /* StringUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -492,6 +507,7 @@
 		967F9697236C681B00178204 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9632E114236DE83800A2CB2E /* PopupMessage */,
 				967D7874236CF59E00438476 /* Label */,
 				967F9699236C682800178204 /* TextField */,
 				967F9698236C682300178204 /* Button */,
@@ -518,8 +534,9 @@
 		967F969C236C689800178204 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				967F969E236C6A4E00178204 /* Protocol */,
 				967F969F236C6A7500178204 /* DefaultTheme.swift */,
+				9632E117236DEFA300A2CB2E /* NeonTheme.swift */,
+				967F969E236C6A4E00178204 /* Protocol */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -759,6 +776,7 @@
 				967D78FD236D6CFE00438476 /* ViewStylingUtil.swift in Sources */,
 				967D7876236CF5B500438476 /* CLabel.swift in Sources */,
 				967D78E9236D5BEF00438476 /* Extensions.swift in Sources */,
+				9632E119236DEFA400A2CB2E /* NeonTheme.swift in Sources */,
 				967D78EC236D5BEF00438476 /* Configuration.swift in Sources */,
 				967D78E6236D5BEF00438476 /* APIs.swift in Sources */,
 				967F96B0236C75FB00178204 /* CTextField.swift in Sources */,
@@ -771,6 +789,7 @@
 				967D7912236DC4FD00438476 /* UIView_Extension.swift in Sources */,
 				967D78E2236D5BEF00438476 /* AlamofireImplementations.swift in Sources */,
 				967D78E3236D5BEF00438476 /* BitcoinPriceAPI.swift in Sources */,
+				9632E113236DE41100A2CB2E /* StringUtil.swift in Sources */,
 				967D78AA236D272D00438476 /* CmcServiceError.swift in Sources */,
 				967F96AE236C75AE00178204 /* CTableSectionViewModel.swift in Sources */,
 				967F9690236C649500178204 /* CViewControllerProtocol.swift in Sources */,
@@ -778,6 +797,7 @@
 				967F96A6236C72F300178204 /* NotificationEnums.swift in Sources */,
 				967D78E4236D5BEF00438476 /* CodableHelper.swift in Sources */,
 				967D78A8236D236200438476 /* AppData.swift in Sources */,
+				9632E116236DE83800A2CB2E /* CPopupDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

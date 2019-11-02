@@ -27,7 +27,9 @@ class ConfirmTableViewCell: CTableViewCell {
     override func setupUI() {
         self.backgroundColor = .clear
         self.selectionStyle = .none
-        self.viewModel = ConfirmTableViewCellViewModel()
+        if self.viewModel == nil {
+            self.viewModel = ConfirmTableViewCellViewModel()
+        }
         let vm = self.viewModel as! ConfirmTableViewCellViewModel
         cancelButton.setTitle(vm.cancelTitle, for: .normal)
         confirmButton.setTitle(vm.confirmTitle, for: .normal)

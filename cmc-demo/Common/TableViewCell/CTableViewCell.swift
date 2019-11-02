@@ -24,5 +24,5 @@ class CTableViewCell: UITableViewCell, CTableViewCellProtocol {
     }
 
     // view model for cell
-    var viewModel: CTableViewCellViewModelProtocol?
+    var viewModel: CTableViewCellViewModelProtocol? = nil
 }

@@ -13,6 +13,9 @@ class ViewStylingUtil {
     private init() { }
     
     func applyGradient(_ view: UIView, bgColors: [UIColor]) {
+        if let gradLayer = view.layer.sublayers?[0], gradLayer is CAGradientLayer {
+            gradLayer.removeFromSuperlayer()
+        }
         // setup gradient layer
         let gradientLayer = CAGradientLayer()
         gradientLayer.masksToBounds = false

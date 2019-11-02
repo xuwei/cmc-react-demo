@@ -24,9 +24,11 @@ class SpacerTableViewCell: CTableViewCell {
     
     override func setupUI() {
        self.selectionStyle = .none
-        self.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
+       self.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
        self.isUserInteractionEnabled = false
-       self.viewModel = SpacerTableViewCellViewModel()
+       if self.viewModel == nil {
+            self.viewModel = SpacerTableViewCellViewModel()
+       }
        let vm = self.viewModel as! SpacerTableViewCellViewModel
        self.cellHeight.constant = vm.height
     }

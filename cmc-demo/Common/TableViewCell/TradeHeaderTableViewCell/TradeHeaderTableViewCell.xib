@@ -31,11 +31,11 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UK 100 Cash" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FR-fE-pSU" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="3FR-fE-pSU" secondAttribute="trailing" id="96G-Ss-iEz"/>
                                                     <constraint firstItem="3FR-fE-pSU" firstAttribute="top" secondItem="fdl-P2-15d" secondAttribute="top" id="QdL-5M-NyA"/>
@@ -52,11 +52,11 @@
                                                         <string key="text">BUY
 Market</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="3jw-eH-c0R" firstAttribute="top" secondItem="7pM-Fu-NOT" secondAttribute="top" id="YJm-hs-mc7"/>
                                                     <constraint firstAttribute="trailing" secondItem="3jw-eH-c0R" secondAttribute="trailing" id="dLI-sE-UMS"/>
@@ -81,13 +81,13 @@ Market</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALm-TU-0mJ" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="7,449.79" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP5-DV-ZFH" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="17" width="191" height="130"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L: 7,000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPo-7K-nGz" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
@@ -99,7 +99,7 @@ Market</string>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="HxM-OI-g2u" secondAttribute="trailing" id="Mtk-zf-yxu"/>
                                                     <constraint firstItem="HxM-OI-g2u" firstAttribute="leading" secondItem="st0-Vq-vgk" secondAttribute="leading" id="ccv-qy-sle"/>
@@ -116,13 +116,13 @@ Market</string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Buy" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLl-qi-7FF" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="7,449.79" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxm-K4-npa" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="17" width="191" height="130"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H: 8,000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7S7-1N-dqi" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
@@ -134,7 +134,7 @@ Market</string>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="t03-tU-a7T" secondAttribute="bottom" id="UX3-i0-ovW"/>
                                                     <constraint firstAttribute="trailing" secondItem="t03-tU-a7T" secondAttribute="trailing" id="gYE-pS-xJl"/>
@@ -161,11 +161,11 @@ Market</string>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="DC8-gc-iMN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="iqr-VA-ph5" secondAttribute="bottom" id="4fp-SW-rHs"/>
                             <constraint firstItem="iqr-VA-ph5" firstAttribute="top" secondItem="D6T-fn-AGf" secondAttribute="top" id="AQm-lf-xcf"/>
@@ -177,7 +177,7 @@ Market</string>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="D6T-fn-AGf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="6vI-HH-eFv"/>
                     <constraint firstAttribute="trailing" secondItem="D6T-fn-AGf" secondAttribute="trailing" constant="20" id="My5-OA-sEn"/>

@@ -1,7 +1,10 @@
 PODS:
   - Alamofire (4.9.0)
   - DateToolsSwift (4.0.0)
+  - DynamicBlurView (3.0.1)
   - Hex (6.1.0)
+  - PopupDialog (1.0.0):
+    - DynamicBlurView (~> 3.0.1)
   - PromiseKit (6.11.0):
     - PromiseKit/CorePromise (= 6.11.0)
     - PromiseKit/Foundation (= 6.11.0)
@@ -16,21 +19,26 @@ DEPENDENCIES:
   - Alamofire
   - DateToolsSwift
   - Hex
+  - PopupDialog (~> 1.0.0)
   - PromiseKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - DateToolsSwift
+    - DynamicBlurView
     - Hex
+    - PopupDialog
     - PromiseKit
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
+  PopupDialog: 28f29a1ffe9e1fab32fb258b53d56ca31670e8a2
   PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
 
-PODFILE CHECKSUM: cb2a3092e08752b1c4501bad862d0f7482cb83f9
+PODFILE CHECKSUM: 7c1b2ede9badde70e0a9efe2f3dfca6b05ed652f
 
 COCOAPODS: 1.8.4

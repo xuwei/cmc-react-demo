@@ -32,14 +32,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-Rv-M2x">
                                         <rect key="frame" x="20" y="0.0" width="250" height="82"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsD-8u-ztm" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsD-8u-ztm" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-Y3-P0R" customClass="CTextField" customModule="cmc_demo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="14.5" width="250" height="47.5"/>
+                                                <rect key="frame" x="0.0" y="17" width="250" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -63,13 +63,13 @@
                                         <rect key="frame" x="290" y="0.0" width="250" height="82"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn5-SU-Z24" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7p-Lc-AUT" customClass="CTextField" customModule="cmc_demo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="14.5" width="250" height="47.5"/>
+                                                <rect key="frame" x="0.0" y="17" width="250" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -95,7 +95,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Knx-LV-DeZ" secondAttribute="bottom" id="4Z1-Mg-Wpw"/>
                             <constraint firstAttribute="trailing" secondItem="Knx-LV-DeZ" secondAttribute="trailing" id="hnC-Jg-RKY"/>

@@ -17,7 +17,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlU-84-4VQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="708"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="XDr-jK-gFE"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="spS-zQ-byJ"/>
@@ -25,7 +25,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAw-WU-r2W">
                                 <rect key="frame" x="0.0" y="796" width="414" height="66"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="ISn-Kz-xx7"/>
                                 </constraints>
@@ -43,7 +43,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zdf-Cd-fu4"/>
+                    <navigationItem key="navigationItem" id="zdf-Cd-fu4">
+                        <barButtonItem key="rightBarButtonItem" image="sparkles" catalog="system" style="plain" id="JJA-zf-iwS">
+                            <connections>
+                                <action selector="randomTheme" destination="BYZ-38-t0r" id="She-n0-gBN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="confirmViewContainer" destination="DAw-WU-r2W" id="dGG-Pp-XDK"/>
                         <outlet property="tableview" destination="xlU-84-4VQ" id="BQk-w2-kob"/>
@@ -72,4 +78,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sparkles" catalog="system" width="56" height="64"/>
+    </resources>
 </document>

@@ -10,20 +10,18 @@ import UIKit
 
 class BuyViewModel {
     var sections = [CTableSectionViewModel]()
-    
+    var tradeHeaderView = TradeHeaderViewCellViewModel()
+    var amountEntry = AmountEntryTableViewCellViewModel()
+    let spacer = SpacerTableViewCellViewModel()
     init() {
         
     }
     
     func load() {
         let section = CTableSectionViewModel()
-        let spacer1 = SpacerTableViewCellViewModel()
-        section.rows.append(spacer1)
-        let tradeHeader = TradeHeaderViewCellViewModel()
-        section.rows.append(tradeHeader)
-        let spacer2 = SpacerTableViewCellViewModel()
-        section.rows.append(spacer2)
-        let amountEntry = AmountEntryTableViewCellViewModel()
+        section.rows.append(spacer)
+        section.rows.append(tradeHeaderView)
+        section.rows.append(spacer)
         section.rows.append(amountEntry)
         self.sections.append(section)
     }

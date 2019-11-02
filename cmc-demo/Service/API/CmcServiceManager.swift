@@ -70,19 +70,24 @@ extension CmcServiceManager {
         }
     }
     
-    @objc fileprivate func blockchainTicker() {
-        LoggingUtil.shared.cPrint("blockchainTicker")
+    func savePrices(_ price: Price) {
         let currencies = Currency.allSupported()
-        CmcServiceManager.shared.getBitcoinPrices().done { price in
-            let mirror = Mirror(reflecting: price)
-            for child in mirror.children {
-                if let varName = child.label, let currency = Currency(rawValue: varName),
-                    currencies.contains(currency), let priceInfo = child.value as? PriceInfo {
-                    self.blockchainPrices[currency.rawValue] = priceInfo
-                }
+        let mirror = Mirror(reflecting: price)
+        for child in mirror.children {
+            if let varName = child.label, let currency = Currency(rawValue: varName),
+                currencies.contains(currency), let priceInfo = child.value as? PriceInfo {
+                self.blockchainPrices[currency.rawValue] = priceInfo
             }
-            LoggingUtil.shared.cPrint(self.blockchainPrices)
-            AppData.shared.lastRefreshed = Date().timeStamp()
+        }
+        
+        AppData.shared.lastRefreshed = Date().timeStamp()
+        
+    }
+    
+    @objc func blockchainTicker() {
+        LoggingUtil.shared.cPrint("blockchainTicker")
+        CmcServiceManager.shared.getBitcoinPrices().done { price in
+            self.savePrices(price)
             NotificationService.shared.notifyPrices(prices: self.blockchainPrices)
         }.catch { err in
             NotificationService.shared.notifyError(error: err)

@@ -12,23 +12,37 @@ class AmountEntryTableViewCellViewModel: CTableViewCellViewModelProtocol {
     var identifier: String = "AmountEntryTableViewCell"
     var currency: Currency = AppData.shared.currentCurrency
     var amount: Double = 0.0
-    var units: Int = 0
+    var units: Double = 0.0
     
-    func calculateAmountByUnits(_ units: Int) {
+    func price()->PriceInfo {
         let price = CmcServiceManager.shared.blockchainPrice(AppData.shared.currentCurrency.rawValue)
-        self.amount = Double(units) * (price.buy ?? 0.0)
+        return price
+    }
+    
+    func calculateAmountByUnits(_ units: Double) {
+        
+        if units <= 0 {
+            self.amount = 0.0
+            self.units = 0.0
+            return
+        }
+        
+        self.amount = Double(units) * (price().buy ?? 0.0)
         self.units = units
     }
     
     func calculatedUnitsByAmount(_ amount: Double) {
-        guard amount >= 0.0 else { return }
-        let price = CmcServiceManager.shared.blockchainPrice(AppData.shared.currentCurrency.rawValue)
-        self.units = Int((price.buy ?? 0.0) / amount)
+        if amount <= 0.0 {
+            self.amount = 0.0
+            self.units = 0
+            return
+        }
+        
+        self.units = (price().buy ?? 0) / amount
         self.amount = amount
     }
     
     func symbol()->String {
-        let price = CmcServiceManager.shared.blockchainPrice(AppData.shared.currentCurrency.rawValue)
-        return price.symbol ?? ""
+        return price().symbol ?? ""
     }
 }

@@ -39,6 +39,9 @@ class CTextField: UITextField {
        self.rightView = paddingView
        self.rightViewMode = .always
        AppConfig.shared.activeTheme.cardStyling(self, borderColor: AppConfig.shared.activeTheme.lightGrayColor)
+    
+        self.attributedPlaceholder = NSAttributedString(string: "placeholder text",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: AppConfig.shared.activeTheme.lightGrayColor])
    }
     
     override open var intrinsicContentSize: CGSize {
