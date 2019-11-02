@@ -8,14 +8,57 @@
 
 import UIKit
 
+enum CTextFieldState {
+    case normal
+    case active
+}
+
+@IBDesignable
 class CTextField: UITextField {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    var textFieldState: CTextFieldState = .normal
+    
+    override init(frame: CGRect) {
+           super.init(frame: frame)
+           setupUI()
+       }
+       
+   required init?(coder aDecoder: NSCoder) {
+       super.init(coder: aDecoder)
+       setupUI()
+   }
+    
+   func setupUI() {
+       UITextField.appearance().keyboardAppearance = .dark
+       self.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
+       self.font = AppConfig.shared.activeTheme.defaultFont
+       self.textColor = AppConfig.shared.activeTheme.textColor
+       let paddingView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: AppConfig.shared.activeTheme.mediumPadding, height: Double(AppConfig.shared.activeTheme.defaultButtonHeight)))
+       self.leftView = paddingView
+       self.leftViewMode = .always
+       self.rightView = paddingView
+       self.rightViewMode = .always
+       AppConfig.shared.activeTheme.cardStyling(self, borderColor: AppConfig.shared.activeTheme.lightGrayColor)
+   }
+    
+    override open var intrinsicContentSize: CGSize {
+       get {
+           return CGSize(width: super.intrinsicContentSize.width, height: AppConfig.shared.activeTheme.defaultButtonHeight)
+       }
     }
-    */
-
+    
+    override func prepareForInterfaceBuilder() {
+        setupUI()
+    }
+    
+     // button style based on button type
+    func setTextFieldState(_ type: CTextFieldState) {
+        self.textFieldState = type
+        switch type {
+        case .normal:
+            self.layer.borderColor = AppConfig.shared.activeTheme.lightGrayColor.cgColor
+        case .active:
+            self.layer.borderColor = AppConfig.shared.activeTheme.highlightColor.cgColor
+        }
+    }
 }

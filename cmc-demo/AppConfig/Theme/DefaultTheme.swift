@@ -17,19 +17,19 @@ struct DefaultTheme: AppThemeProtocol {
 // MARK: fonts
 extension DefaultTheme {
     var defaultFont: UIFont {
-         get { return UIFont.systemFont(ofSize: 12.0) }
+         get { return UIFont.systemFont(ofSize: 14.0) }
     }
 
     var mediumFont: UIFont {
-        get { return UIFont.systemFont(ofSize: 16.0) }
+        get { return UIFont.systemFont(ofSize: 18.0) }
     }
 
     var headerFont: UIFont {
-        get { return UIFont.systemFont(ofSize: 22.0) }
+        get { return UIFont.systemFont(ofSize: 24.0) }
     }
     
     var extraLargeFont: UIFont {
-        get { return UIFont.systemFont(ofSize: 30.0)}
+        get { return UIFont.systemFont(ofSize: 32.0)}
     }
 }
 
@@ -63,12 +63,20 @@ extension DefaultTheme {
         get { return UIColor.init(hex: "0dbddc")}
     }
     
+    var profitColor: UIColor {
+        get { return UIColor.init(hex: "00d50e")}
+    }
+    
+    var lossColor: UIColor {
+        get { return UIColor.init(hex: "d60015")}
+    }
+    
     var buyColor: UIColor {
-        get { return UIColor.init(hex: "00e200")}
+        get { return UIColor.init(hex: "03ddff")}
     }
     
     var sellColor: UIColor {
-        get { return UIColor.init(hex: "de0b08")}
+        get { return UIColor.init(hex: "f2991a")}
     }
 }
 
@@ -124,5 +132,11 @@ extension DefaultTheme {
             view.layer.borderWidth = 1.0
             view.layer.borderColor = color.cgColor
         }
+    }
+    
+    func roundRectButton(_ button: inout UIButton) {
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = AppConfig.shared.activeTheme.defaultCornerRadius
+        button.clipsToBounds = true
     }
 }

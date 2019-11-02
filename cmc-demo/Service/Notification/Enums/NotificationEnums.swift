@@ -9,6 +9,15 @@
 import UIKit
 
 enum NotificationEvent: String {
+    case priceUpdate = "priceUpdate"
+    case priceUpdateError = "priceUpdateError"
     case dismissKeyboard = "dismissKeyboard"
+}
+
+enum NotificationUIEvents: String {
+    case cancel = "cancel"
+    case confirm = "confirm"
+    case enableConfirmView = "enableConfirmView"
+    case disableConfirmView = "disableConfirmView"
 }
 

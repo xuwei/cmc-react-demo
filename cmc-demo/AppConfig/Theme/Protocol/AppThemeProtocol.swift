@@ -26,6 +26,8 @@ protocol AppThemeProtocol {
     var altTextBackgroundColor: UIColor { get }
     var highlightColor: UIColor { get }
     var confirmColor: UIColor { get }
+    var profitColor: UIColor { get }
+    var lossColor: UIColor { get }
     var buyColor: UIColor { get }
     var sellColor: UIColor { get }
     
@@ -52,4 +54,5 @@ protocol AppThemeProtocol {
     var defaultCornerRadius: CGFloat { get }
     
     func cardStyling(_ view: UIView, borderColor: UIColor?)
+    func roundRectButton(_ button: inout UIButton)
 }

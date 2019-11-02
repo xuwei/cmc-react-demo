@@ -10,8 +10,13 @@ import UIKit
 
 class AppConfig {
     static let shared = AppConfig()
-    var activeTheme = DefaultTheme()
+    var activeTheme: AppThemeProtocol = DefaultTheme()
     
     private init() {
+    }
+    
+    // to enable change of theme
+    func updateTheme(_ theme: AppThemeProtocol) {
+        self.activeTheme = theme
     }
 }

@@ -10,7 +10,6 @@ target 'cmc-demo' do
   pod 'Alamofire'
   pod 'PromiseKit'
   pod 'DateToolsSwift'
-  pod 'PullToRefreshKit'
 
   target 'cmc-demoTests' do
     inherit! :search_paths
