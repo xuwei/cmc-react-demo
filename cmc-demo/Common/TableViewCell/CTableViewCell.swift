@@ -9,19 +9,20 @@
 import UIKit
 
 protocol CTableViewCellProtocol {
-    func setupConfig()
+    func setupUI()
 }
 
 class CTableViewCell: UITableViewCell, CTableViewCellProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
     }
 
-    func setupConfig() {
+    func setupUI() {
         // subclass needs to override
     }
 
     // view model for cell
-    var viewModel: CTableViewCellViewModelProtocol?
+    var viewModel: CTableViewCellViewModelProtocol? = nil
 }

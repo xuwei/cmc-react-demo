@@ -17,24 +17,37 @@ struct DefaultTheme: AppThemeProtocol {
 // MARK: fonts
 extension DefaultTheme {
     var defaultFont: UIFont {
-         get { return UIFont.systemFont(ofSize: 12.0) }
+         get { return UIFont.systemFont(ofSize: 14.0) }
     }
 
     var mediumFont: UIFont {
-        get { return UIFont.systemFont(ofSize: 16.0) }
+        get { return UIFont.systemFont(ofSize: 18.0) }
     }
 
     var headerFont: UIFont {
-        get { return UIFont.systemFont(ofSize: 22.0) }
+        get { return UIFont.systemFont(ofSize: 24.0) }
     }
     
     var extraLargeFont: UIFont {
-        get { return UIFont.systemFont(ofSize: 30.0)}
+        get { return UIFont.systemFont(ofSize: 32.0)}
     }
 }
 
 // MARK: colors
 extension DefaultTheme {
+    
+    var keyboardAppearance: UIKeyboardAppearance {
+        get { return .dark }
+    }
+    
+    var statusBarStyle: UIStatusBarStyle {
+        get { return .darkContent }
+    }
+    
+    var barStyle: UIBarStyle {
+        get { return .default }
+    }
+    
     var textColor: UIColor {
         get { return UIColor.init(hex: "ffffff")}
     }
@@ -63,12 +76,32 @@ extension DefaultTheme {
         get { return UIColor.init(hex: "0dbddc")}
     }
     
-    var buyColor: UIColor {
-        get { return UIColor.init(hex: "00e200")}
+    var profitColor: UIColor {
+        get { return UIColor.init(hex: "00d50e")}
     }
     
+    var lossColor: UIColor {
+        get { return UIColor.init(hex: "d60015")}
+    }
+    
+    var buyColor: UIColor {
+        get { return UIColor.init(hex: "03ddff")}
+    }
+//
     var sellColor: UIColor {
-        get { return UIColor.init(hex: "de0b08")}
+        get { return UIColor.init(hex: "f2991a")}
+    }
+    
+    var navBgColor: UIColor {
+        get { return UIColor.init(hex: "000000")}
+    }
+    
+    var navTintColor: UIColor {
+        get { return UIColor.init(hex: "ffffff")}
+    }
+    
+    var navTitleColor: UIColor {
+        get { return UIColor.init(hex: "0dbddc")}
     }
 }
 
@@ -83,7 +116,7 @@ extension DefaultTheme {
     }
     
     var lightGrayColor: UIColor {
-        get { return UIColor(hex: "666666") }
+        get { return UIColor(hex: "efefef") }
     }
 }
 
@@ -93,7 +126,7 @@ extension DefaultTheme {
     
     var mediumAnimationDuration: TimeInterval { return 0.5 }
     
-    var quickAnimationDuration: TimeInterval { return 0.25}
+    var quickAnimationDuration: TimeInterval { return 0.1}
 }
 
 // MARK: padding
@@ -124,5 +157,11 @@ extension DefaultTheme {
             view.layer.borderWidth = 1.0
             view.layer.borderColor = color.cgColor
         }
+    }
+    
+    func roundRectButton(_ button: inout UIButton) {
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = AppConfig.shared.activeTheme.defaultCornerRadius
+        button.clipsToBounds = true
     }
 }

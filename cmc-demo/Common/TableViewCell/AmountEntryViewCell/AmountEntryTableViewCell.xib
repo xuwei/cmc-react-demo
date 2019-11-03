@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AmountEntryTableViewCell" customModule="cmc_demo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KGk-i7-Jjw" customClass="AmountEntryTableViewCell" customModule="cmc_demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="560" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="560" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsC-5j-NwO">
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="82"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knx-LV-DeZ">
+                                <rect key="frame" x="0.0" y="0.0" width="560" height="82"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykC-hV-W86">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="82"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="E8v-g2-YR4"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-Rv-M2x">
+                                        <rect key="frame" x="20" y="0.0" width="250" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsD-8u-ztm" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-Y3-P0R" customClass="CTextField" customModule="cmc_demo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="17" width="250" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="geu-gi-f4s">
+                                                <rect key="frame" x="0.0" y="62" width="250" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="rmq-om-5ES"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2c-ZD-Jgs">
+                                        <rect key="frame" x="270" y="0.0" width="20" height="82"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Ky9-wy-sEp"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VFu-Tx-Whl">
+                                        <rect key="frame" x="290" y="0.0" width="250" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn5-SU-Z24" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7p-Lc-AUT" customClass="CTextField" customModule="cmc_demo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="17" width="250" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-uH-I1b">
+                                                <rect key="frame" x="0.0" y="62" width="250" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="xCT-XT-nYX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQ0-Ca-VBK">
+                                        <rect key="frame" x="540" y="0.0" width="20" height="82"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="IH6-Jx-7et"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i7p-Rv-M2x" firstAttribute="width" secondItem="VFu-Tx-Whl" secondAttribute="width" id="iTR-H2-MM5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Knx-LV-DeZ" secondAttribute="bottom" id="4Z1-Mg-Wpw"/>
+                            <constraint firstAttribute="trailing" secondItem="Knx-LV-DeZ" secondAttribute="trailing" id="hnC-Jg-RKY"/>
+                            <constraint firstItem="Knx-LV-DeZ" firstAttribute="leading" secondItem="IsC-5j-NwO" secondAttribute="leading" id="tFc-99-vAe"/>
+                            <constraint firstItem="Knx-LV-DeZ" firstAttribute="top" secondItem="IsC-5j-NwO" secondAttribute="top" id="xSB-iF-nrm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IsC-5j-NwO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5VG-Gf-ujn"/>
+                    <constraint firstAttribute="bottom" secondItem="IsC-5j-NwO" secondAttribute="bottom" id="OJ9-sH-7vd"/>
+                    <constraint firstItem="IsC-5j-NwO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TAf-YZ-2Ry"/>
+                    <constraint firstAttribute="trailing" secondItem="IsC-5j-NwO" secondAttribute="trailing" id="ooj-en-bBS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountTextField" destination="c7p-Lc-AUT" id="sN6-kG-hKj"/>
+                <outlet property="amountTitleLabel" destination="Vn5-SU-Z24" id="GxT-lB-IqA"/>
+                <outlet property="unitTextField" destination="NZn-Y3-P0R" id="Uge-cA-pjP"/>
+                <outlet property="unitTitleLabel" destination="qsD-8u-ztm" id="0gR-wa-LaY"/>
+            </connections>
+            <point key="canvasLocation" x="123.18840579710145" y="113.16964285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

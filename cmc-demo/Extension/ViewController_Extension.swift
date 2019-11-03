@@ -22,6 +22,19 @@ extension UIViewController: UIViewControllerProtocol  {
 }
 
 extension UIViewController {
+    func showMessage(_ msg: String, completion: (()->Void)?) {
+        // Prepare the popup assets
+        let message = msg
+        let cPopup = CPopupDialog(.message, messageBody: message, button: .ok , completion: {
+            if let cb = completion { cb() }
+        })
+        cPopup.present(self)
+    }
+}
+
+
+// MARK: Keyboard handling
+extension UIViewController {
     @objc func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if self.baseScrollView() != nil, scrollView === self.baseScrollView(), scrollView.contentOffset.x > 0 {
             scrollView.contentOffset.x = 0
@@ -86,5 +99,10 @@ extension UIViewController {
 
     @objc func dismissKeyboard(notification: NSNotification) {
         self.view.endEditing(true)
+    }
+    
+    func tapToDismissKeyboard() {
+        let tapToDismissKeyboard: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(notification:)))
+        self.view.addGestureRecognizer(tapToDismissKeyboard)
     }
 }

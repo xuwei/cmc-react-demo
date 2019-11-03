@@ -1,0 +1,137 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Blockchain Price",
+    "version": "1.0.0",
+    "title": "Blockchain Price",
+    "termsOfService": "",
+    "contact": {
+      "email": "support@wisetreeapps.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "blockchain.info",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/ticker": {
+      "get": {
+        "tags": [
+          "bitcoin price"
+        ],
+        "summary": "poll for bitcoin prices",
+        "description": "",
+        "operationId": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Price"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Price": {
+      "type": "object",
+      "properties": {
+        "USD": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "AUD": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "BRL": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "CAD": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "CHF": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "CLP": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "CNY": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "DKK": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "EUR": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "GBP": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "INR": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "ISK": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "JPY": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "KRW": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "NZD": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "PLN": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "RUB": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "SEK": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "SGD": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "THD": {
+          "$ref": "#/definitions/PriceInfo"
+        },
+        "TWD": {
+          "$ref": "#/definitions/PriceInfo"
+        }
+      }
+    },
+    "PriceInfo": {
+      "type": "object",
+      "properties": {
+        "15m": {
+          "type": "number"
+        },
+        "last": {
+          "type": "number"
+        },
+        "buy": {
+          "type": "number"
+        },
+        "sell": {
+          "type": "number"
+        },
+        "symbol": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

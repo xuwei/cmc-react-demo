@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import NotificationCenter
 
 protocol CViewControllerProtocol {
     func addObservables()
     func setupUI()
-    func updateUI()
+    
+    // objc so that we can trigger it by notification with #selector reference
+    func updateUI(_ notification: NSNotification)
 }

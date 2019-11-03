@@ -19,6 +19,9 @@ protocol AppThemeProtocol {
     var extraLargeFont: UIFont { get }
     
     // MARK: default colors
+    var keyboardAppearance: UIKeyboardAppearance { get }
+    var statusBarStyle: UIStatusBarStyle { get }
+    var barStyle: UIBarStyle { get }
     var textColor: UIColor { get }
     var altTextColor: UIColor { get }
     var primaryColor: UIColor { get }
@@ -26,8 +29,14 @@ protocol AppThemeProtocol {
     var altTextBackgroundColor: UIColor { get }
     var highlightColor: UIColor { get }
     var confirmColor: UIColor { get }
+    var profitColor: UIColor { get }
+    var lossColor: UIColor { get }
     var buyColor: UIColor { get }
     var sellColor: UIColor { get }
+    var navBgColor: UIColor { get }
+    var navTintColor: UIColor { get }
+    var navTitleColor: UIColor { get }
+    
     
     // MARK: disabled alpha
     var nonActiveAlpha: CGFloat { get } 
@@ -52,4 +61,5 @@ protocol AppThemeProtocol {
     var defaultCornerRadius: CGFloat { get }
     
     func cardStyling(_ view: UIView, borderColor: UIColor?)
+    func roundRectButton(_ button: inout UIButton)
 }

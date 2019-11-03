@@ -16,25 +16,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xlU-84-4VQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="708"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="XDr-jK-gFE"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="spS-zQ-byJ"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAw-WU-r2W">
+                                <rect key="frame" x="0.0" y="796" width="414" height="66"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="ISn-Kz-xx7"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xlU-84-4VQ" secondAttribute="trailing" id="37B-aR-udm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xlU-84-4VQ" secondAttribute="bottom" id="Egh-oi-YCu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DAw-WU-r2W" secondAttribute="bottom" id="3gn-TP-9eb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAw-WU-r2W" secondAttribute="trailing" id="Fj3-Mt-DUE"/>
+                            <constraint firstItem="DAw-WU-r2W" firstAttribute="top" secondItem="xlU-84-4VQ" secondAttribute="bottom" id="faL-BD-8YH"/>
+                            <constraint firstItem="DAw-WU-r2W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gYC-lK-StF"/>
                             <constraint firstItem="xlU-84-4VQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hNN-gF-l4s"/>
                             <constraint firstItem="xlU-84-4VQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z2b-yi-NMj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zdf-Cd-fu4"/>
+                    <navigationItem key="navigationItem" id="zdf-Cd-fu4">
+                        <barButtonItem key="rightBarButtonItem" image="sparkles" catalog="system" style="plain" id="JJA-zf-iwS">
+                            <connections>
+                                <action selector="switchTheme:" destination="BYZ-38-t0r" id="oHW-hk-xtm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="confirmViewContainer" destination="DAw-WU-r2W" id="dGG-Pp-XDK"/>
                         <outlet property="tableview" destination="xlU-84-4VQ" id="BQk-w2-kob"/>
                     </connections>
                 </viewController>
@@ -61,4 +78,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sparkles" catalog="system" width="56" height="64"/>
+    </resources>
 </document>
