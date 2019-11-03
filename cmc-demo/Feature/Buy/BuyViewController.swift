@@ -125,7 +125,7 @@ extension BuyViewController {
     
     @objc func updateUI(_ notification: NSNotification) {
         LoggingUtil.shared.cPrint("update UI")
-        self.tableview.reloadData()
+        self.refreshTradeHeader()
     }
 }
 
@@ -240,9 +240,19 @@ extension BuyViewController {
 
 // MARK: refresh use by selecting theme
 extension BuyViewController {
+    
+    func refreshTradeHeader() {
+        self.tableview.reloadRows(at: [self.viewModel.tradeHeaderIndexPath()], with: .automatic)
+    }
+    
+    func refreshTable() {
+        self.tableview.reloadData()
+    }
+    
     func refresh() {
         AppConfig.shared.setupNavBarUI(self)
         self.view.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
+        self.tableview.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
         self.tableview.reloadData()
     }
 }

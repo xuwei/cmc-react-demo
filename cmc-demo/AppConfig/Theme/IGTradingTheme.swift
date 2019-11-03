@@ -49,31 +49,31 @@ extension IGTradingTheme {
     }
     
     var textColor: UIColor {
-        get { return UIColor.init(hex: "ffffff")}
+        get { return UIColor.init(hex: "34333C")}
     }
     
     var altTextColor: UIColor {
-        get { return UIColor.init(hex: "ffffff")}
+        get { return UIColor.init(hex: "858586")}
     }
     
     var primaryColor: UIColor {
-        get { return UIColor.init(hex: "FF0DBE")}
+        get { return UIColor.init(hex: "B72122")}
     }
     
     var backgroundColor: UIColor {
-        get { return UIColor.init(hex: "56386C")}
+        get { return UIColor.init(hex: "FFFFFF")}
     }
     
     var altTextBackgroundColor: UIColor {
-        get { return UIColor.init(hex: "540CE8")}
+        get { return UIColor.init(hex: "EBEBED")}
     }
     
     var highlightColor: UIColor {
-        get { return UIColor.init(hex: "FFD100")}
+        get { return UIColor.init(hex: "0D94D3")}
     }
     
     var confirmColor: UIColor {
-        get { return UIColor.init(hex: "9900FF")}
+        get { return UIColor.init(hex: "5F9C42")}
     }
     
     var profitColor: UIColor {
@@ -85,11 +85,11 @@ extension IGTradingTheme {
     }
     
     var buyColor: UIColor {
-        get { return UIColor.init(hex: "9900FF")}
+        get { return UIColor.init(hex: "0D94D3")}
     }
     
     var sellColor: UIColor {
-        get { return UIColor.init(hex: "4FF09F")}
+        get { return UIColor.init(hex: "DC3A35")}
     }
 }
 

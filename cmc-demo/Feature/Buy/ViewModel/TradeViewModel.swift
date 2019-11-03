@@ -25,4 +25,12 @@ class TradeViewModel {
         section.rows.append(amountEntry)
         self.sections.append(section)
     }
+    
+    func tradeHeaderIndexPath()->IndexPath {
+        return IndexPath(row: 1, section: 0)
+    }
+    
+    func amountEntryIndexPath()->IndexPath {
+        return IndexPath(row: 3, section: 0)
+    }
 }
