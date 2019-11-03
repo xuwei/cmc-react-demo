@@ -34,6 +34,9 @@ protocol AppThemeProtocol {
     var buyColor: UIColor { get }
     var sellColor: UIColor { get }
     var navBgColor: UIColor { get }
+    var navTintColor: UIColor { get }
+    var navTitleColor: UIColor { get }
+    
     
     // MARK: disabled alpha
     var nonActiveAlpha: CGFloat { get } 

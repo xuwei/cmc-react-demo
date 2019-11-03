@@ -29,8 +29,8 @@ class CTextField: UITextField {
    }
     
    func setupUI() {
-       UITextField.appearance().keyboardAppearance = .dark
-    self.backgroundColor = .orange
+    UITextField.appearance().keyboardAppearance = AppConfig.shared.activeTheme.keyboardAppearance
+       self.backgroundColor = AppConfig.shared.activeTheme.altTextBackgroundColor
        self.font = AppConfig.shared.activeTheme.defaultFont
        self.textColor = AppConfig.shared.activeTheme.textColor
        let paddingView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: AppConfig.shared.activeTheme.mediumPadding, height: Double(AppConfig.shared.activeTheme.defaultButtonHeight)))
@@ -41,7 +41,7 @@ class CTextField: UITextField {
        AppConfig.shared.activeTheme.cardStyling(self, borderColor: AppConfig.shared.activeTheme.lightGrayColor)
     
         self.attributedPlaceholder = NSAttributedString(string: "placeholder text",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: AppConfig.shared.activeTheme.lightGrayColor])
+                                                        attributes: [NSAttributedString.Key.foregroundColor: AppConfig.shared.activeTheme.altTextColor])
         updateByType()
    }
     

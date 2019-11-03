@@ -36,7 +36,7 @@ class AppConfig {
     }
     
     func setupNavBarUI() {
-        UINavigationBar.appearance().tintColor = AppConfig.shared.activeTheme.primaryColor
+        UINavigationBar.appearance().tintColor = AppConfig.shared.activeTheme.navTintColor
         UINavigationBar.appearance().backgroundColor = AppConfig.shared.activeTheme.navBgColor
         UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : AppConfig.shared.activeTheme.highlightColor]
@@ -46,10 +46,10 @@ class AppConfig {
     func setupNavBarUI(_ viewController: UIViewController) {
         guard let nav = viewController.navigationController else { return }
         let navBar = nav.navigationBar
-        navBar.tintColor = AppConfig.shared.activeTheme.textColor
+        navBar.tintColor = AppConfig.shared.activeTheme.navTintColor
         navBar.backgroundColor = AppConfig.shared.activeTheme.navBgColor
         navBar.isTranslucent = true
-        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : AppConfig.shared.activeTheme.highlightColor]
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : AppConfig.shared.activeTheme.primaryColor]
         navBar.barTintColor = AppConfig.shared.activeTheme.navBgColor
     }
 }

@@ -95,6 +95,14 @@ extension DefaultTheme {
     var navBgColor: UIColor {
         get { return UIColor.init(hex: "000000")}
     }
+    
+    var navTintColor: UIColor {
+        get { return UIColor.init(hex: "ffffff")}
+    }
+    
+    var navTitleColor: UIColor {
+        get { return UIColor.init(hex: "0dbddc")}
+    }
 }
 
 // MARK: gray system

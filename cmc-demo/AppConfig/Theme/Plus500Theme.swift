@@ -61,7 +61,7 @@ extension Plus500Theme {
     }
     
     var backgroundColor: UIColor {
-        get { return UIColor.init(hex: "000000")}
+        get { return UIColor.init(hex: "2F3E9E")}
     }
     
     var altTextBackgroundColor: UIColor {
@@ -73,7 +73,7 @@ extension Plus500Theme {
     }
     
     var confirmColor: UIColor {
-        get { return UIColor.init(hex: "0dbddc")}
+        get { return UIColor.init(hex: "00d50e")}
     }
     
     var profitColor: UIColor {
@@ -93,8 +93,16 @@ extension Plus500Theme {
     }
     
     var navBgColor: UIColor {
-        get { return UIColor.init(hex: "000000")}
+        get { return UIColor.init(hex: "ffffff")}
     }
+    
+    var navTintColor: UIColor {
+        get { return UIColor.init(hex: "2F3E9E")}
+    }
+    
+    var navTitleColor: UIColor {
+           get { return UIColor.init(hex: "ffffff")}
+       }
 }
 
 // MARK: gray system

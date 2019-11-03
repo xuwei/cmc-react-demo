@@ -73,7 +73,7 @@ extension IGTradingTheme {
     }
     
     var confirmColor: UIColor {
-        get { return UIColor.init(hex: "0D94D3")}
+        get { return UIColor.init(hex: "00d50e")}
     }
     
     var profitColor: UIColor {
@@ -94,6 +94,14 @@ extension IGTradingTheme {
     
     var navBgColor: UIColor {
         get { return UIColor.init(hex: "B72122")}
+    }
+    
+    var navTintColor: UIColor {
+        get { return UIColor.init(hex: "ffffff")}
+    }
+    
+    var navTitleColor: UIColor {
+        get { return UIColor.init(hex: "ffffff")}
     }
 }
 
