@@ -18,6 +18,7 @@ class ConfirmTableViewCell: CTableViewCell {
         super.awakeFromNib()
         // Initialization code
         setupUI()
+        addObservables()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,7 +38,6 @@ class ConfirmTableViewCell: CTableViewCell {
         confirmButton.setType(.confirm)
         cancelButton.isEnabled = true
         confirmButton.isEnabled = false
-        addObservables()
     }
     
     func addObservables() {

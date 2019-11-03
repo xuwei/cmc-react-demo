@@ -156,9 +156,10 @@ Market</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjK-1m-She" customClass="CLabel" customModule="cmc_demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="194" width="382" height="20"/>
+                                <rect key="frame" x="141" y="194" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="DC8-gc-iMN"/>
+                                    <constraint firstAttribute="width" constant="100" id="PFB-U9-ImC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,8 +172,7 @@ Market</string>
                             <constraint firstItem="iqr-VA-ph5" firstAttribute="top" secondItem="D6T-fn-AGf" secondAttribute="top" id="AQm-lf-xcf"/>
                             <constraint firstAttribute="trailing" secondItem="iqr-VA-ph5" secondAttribute="trailing" id="HIw-dL-ptY"/>
                             <constraint firstAttribute="bottom" secondItem="pjK-1m-She" secondAttribute="bottom" id="HWC-U8-xmt"/>
-                            <constraint firstItem="pjK-1m-She" firstAttribute="leading" secondItem="D6T-fn-AGf" secondAttribute="leading" id="fxA-kI-xT4"/>
-                            <constraint firstAttribute="trailing" secondItem="pjK-1m-She" secondAttribute="trailing" id="odT-Z0-piP"/>
+                            <constraint firstItem="pjK-1m-She" firstAttribute="centerX" secondItem="D6T-fn-AGf" secondAttribute="centerX" id="cpC-9j-htb"/>
                             <constraint firstItem="iqr-VA-ph5" firstAttribute="leading" secondItem="D6T-fn-AGf" secondAttribute="leading" id="wDH-09-zAo"/>
                         </constraints>
                     </view>

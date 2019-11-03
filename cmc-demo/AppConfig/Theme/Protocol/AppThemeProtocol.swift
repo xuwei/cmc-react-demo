@@ -19,6 +19,9 @@ protocol AppThemeProtocol {
     var extraLargeFont: UIFont { get }
     
     // MARK: default colors
+    var keyboardAppearance: UIKeyboardAppearance { get }
+    var statusBarStyle: UIStatusBarStyle { get }
+    var barStyle: UIBarStyle { get }
     var textColor: UIColor { get }
     var altTextColor: UIColor { get }
     var primaryColor: UIColor { get }

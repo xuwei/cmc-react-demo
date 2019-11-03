@@ -12,7 +12,7 @@ class StringUtil {
     static let shared = StringUtil()
     private init() {}
     
-    func isNumericOnly(_ string: String)-> Bool {
+    func isPositiveNumericOnly(_ string: String)-> Bool {
         let decimalPointIncluded = CharacterSet.decimalDigits.union (CharacterSet (charactersIn: "."))
         return !string.isEmpty && string.rangeOfCharacter(from: decimalPointIncluded.inverted) == nil
     }

@@ -17,6 +17,8 @@ enum LabelType {
 @IBDesignable
 class CLabel: UILabel {
     
+    var prevColor: UIColor = .clear
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -33,6 +35,7 @@ class CLabel: UILabel {
 
     func setupUI() {
         self.textColor = AppConfig.shared.activeTheme.textColor
+        self.prevColor = self.textColor
         self.font = AppConfig.shared.activeTheme.defaultFont
         self.backgroundColor = .clear
     }

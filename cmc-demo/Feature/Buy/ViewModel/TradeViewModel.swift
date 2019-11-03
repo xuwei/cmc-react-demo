@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BuyViewModel {
+class TradeViewModel {
     var sections = [CTableSectionViewModel]()
     var tradeHeaderView = TradeHeaderViewCellViewModel()
     var amountEntry = AmountEntryTableViewCellViewModel()

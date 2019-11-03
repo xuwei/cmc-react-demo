@@ -52,7 +52,7 @@ class CButton: UIButton {
         self.type = type
         switch type {
         case .normal:
-            self.backgroundColor = AppConfig.shared.activeTheme.lightGrayColor
+            self.backgroundColor = AppConfig.shared.activeTheme.mediumGrayColor
             self.titleLabel?.textColor = AppConfig.shared.activeTheme.textColor
             self.setTitleColor(AppConfig.shared.activeTheme.textColor, for: .normal)
         case .confirm:

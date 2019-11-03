@@ -8,13 +8,17 @@
 
 import UIKit
 import NotificationCenter
+import PopOverMenu
 
 class BuyViewController: UIViewController, CViewControllerProtocol  {
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var confirmViewContainer: UIView!
     var confirmTableViewCell: ConfirmTableViewCell?
-    var viewModel = BuyViewModel()
+    var viewModel = TradeViewModel()
+    var timer: Timer?
+    var flashCount: Int = 0
+    let numOfFlash = 6
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,14 +72,17 @@ class BuyViewController: UIViewController, CViewControllerProtocol  {
         self.title = "\(AppData.shared.tradeType.rawValue) Order"
         // register the reusable cells which we need to compose our screen
         self.registerReusableCells()
-        
-        
-        
     }
 }
 
 //MARK: handling textfield delegate
 extension BuyViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let cTextField = textField as! CTextField
+        cTextField.setTextFieldState(.active)
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         let cTextField = textField as! CTextField
@@ -89,11 +96,13 @@ extension BuyViewController: UITextFieldDelegate {
             self.viewModel.amountEntry.calculateAmountByUnits(units)
         }
         
+        cTextField.setTextFieldState(.normal)
+        textField.resignFirstResponder()
         self.tableview.reloadData()
     }
     
     func validateIsNumeric(_ cTextField: CTextField)->Bool {
-        guard StringUtil.shared.isNumericOnly(cTextField.text ?? "") else {
+        guard StringUtil.shared.isPositiveNumericOnly(cTextField.text ?? "") else {
             NotificationService.shared.notify(NotificationUIEvents.disableConfirmView.rawValue, key: "", object: nil)
             return false
         }
@@ -140,7 +149,23 @@ extension BuyViewController: UITableViewDataSource, UITableViewDelegate {
             amountEntry.unitTextField.delegate = self
             amountEntry.amountTextField.delegate = self
         }
+        
+        if cell is TradeHeaderTableViewCell {
+            LoggingUtil.shared.cPrint("trigger flashing animation here...")
+            let tradeHeader = cell as! TradeHeaderTableViewCell
+            flash([tradeHeader.sellPriceLabel, tradeHeader.buyPriceLabel])
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if cell is TradeHeaderTableViewCell {
+            // flash the labels
+            let tradeHeader = cell as! TradeHeaderTableViewCell
+            self.flash([tradeHeader.sellPriceLabel, tradeHeader.buyPriceLabel])
+        }
     }
     
     func registerReusableCells() {
@@ -164,16 +189,72 @@ extension BuyViewController {
     }
 }
 
-//MARK: random theme
+//MARK: theme selection
 extension BuyViewController {
-    @IBAction func randomTheme() {
+    @IBAction func switchTheme(_ sender: UIBarButtonItem!) {
         LoggingUtil.shared.cPrint("switch theme")
-        AppConfig.shared.updateTheme()
-        setupUI()
-        if self.confirmTableViewCell != nil {
-            self.confirmTableViewCell?.setupUI()
+        let titles = AppConfig.themes.map { $0.name.rawValue }
+        let popOverViewController = PopOverViewController.instantiate()
+        popOverViewController.set(titles: titles)
+        popOverViewController.popoverPresentationController?.barButtonItem = sender
+        let height = CGFloat(titles.count) * AppConfig.shared.activeTheme.defaultButtonHeight + CGFloat(AppConfig.shared.activeTheme.smallPadding)
+        
+        popOverViewController.preferredContentSize = CGSize(width: UIScreen.main.bounds.width*0.5, height: height)
+        popOverViewController.presentationController?.delegate = self
+        popOverViewController.completionHandler = { selectRow in
+            self.selectedTheme(selectRow)
         }
-        self.view.setNeedsLayout()
+        present(popOverViewController, animated: true, completion: nil)
+        
+    }
+    
+    func selectedTheme(_ index: Int) {
+        AppConfig.shared.updateTheme(index)
+        self.refresh()
+    }
+}
+
+// MARK: flashing effect on price labels
+extension BuyViewController {
+    func flash(_ labels: [CLabel]) {
+  
+        self.flashCount = 0
+        self.timer = Timer.scheduledTimer(withTimeInterval: AppConfig.shared.activeTheme.quickAnimationDuration, repeats: true) { (timer) in
+            
+            labels.forEach { label in
+                label.textColor = (self.flashCount % 2 == 0) ? AppConfig.shared.activeTheme.textColor : AppConfig.shared.activeTheme.profitColor
+            }
+            
+            self.flashCount = self.flashCount + 1
+            
+            if self.flashCount == self.numOfFlash {
+                labels.forEach { label in
+                    label.textColor = label.prevColor
+                }
+                timer.invalidate()
+                self.flashCount = 0
+            }
+        }
+    }
+}
+
+// MARK: refresh use by selecting theme
+extension BuyViewController {
+    func refresh() {
+        AppConfig.shared.setupNavBarUI(self)
+        self.view.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
         self.tableview.reloadData()
     }
 }
+
+// MARK: delegate implementation needed by PopOverMenu
+extension BuyViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+}
+

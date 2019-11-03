@@ -9,13 +9,26 @@
 import UIKit
 import Hex
 
-struct NeonTheme: AppThemeProtocol {
+struct Plus500Theme: AppThemeProtocol {
 
-    var themeTitle: String { get { return "Light" } }
+    var themeTitle: String { get { return "Plus500" } }
 }
 
 // MARK: fonts
-extension NeonTheme {
+extension Plus500Theme {
+    
+    var keyboardAppearance: UIKeyboardAppearance {
+        get { return .light }
+    }
+    
+    var statusBarStyle: UIStatusBarStyle {
+        get { return .lightContent }
+    }
+    
+    var barStyle: UIBarStyle {
+        get { return .default }
+    }
+    
     var defaultFont: UIFont {
          get { return UIFont.systemFont(ofSize: 14.0) }
     }
@@ -34,54 +47,54 @@ extension NeonTheme {
 }
 
 // MARK: colors
-extension NeonTheme {
+extension Plus500Theme {
     var textColor: UIColor {
         get { return UIColor.init(hex: "ffffff")}
     }
     
     var altTextColor: UIColor {
-        get { return UIColor.init(hex: "ffffff")}
+        get { return UIColor.init(hex: "8e8e8e")}
     }
     
     var primaryColor: UIColor {
-        get { return UIColor.init(hex: "FF0DBE")}
+        get { return UIColor.init(hex: "0dbddc")}
     }
     
     var backgroundColor: UIColor {
-        get { return UIColor.init(hex: "56386C")}
+        get { return UIColor.init(hex: "000000")}
     }
     
     var altTextBackgroundColor: UIColor {
-        get { return UIColor.init(hex: "540CE8")}
+        get { return UIColor.init(hex: "292a2b")}
     }
     
     var highlightColor: UIColor {
-        get { return UIColor.init(hex: "FFD100")}
+        get { return UIColor.init(hex: "0dbddc")}
     }
     
     var confirmColor: UIColor {
-        get { return UIColor.init(hex: "9900FF")}
+        get { return UIColor.init(hex: "0dbddc")}
     }
     
     var profitColor: UIColor {
-        get { return UIColor.init(hex: "78E80C")}
+        get { return UIColor.init(hex: "00d50e")}
     }
     
     var lossColor: UIColor {
-        get { return UIColor.init(hex: "FF00AB")}
+        get { return UIColor.init(hex: "d60015")}
     }
     
     var buyColor: UIColor {
-        get { return UIColor.init(hex: "9900FF")}
+        get { return UIColor.init(hex: "03ddff")}
     }
     
     var sellColor: UIColor {
-        get { return UIColor.init(hex: "4FF09F")}
+        get { return UIColor.init(hex: "f2991a")}
     }
 }
 
 // MARK: gray system
-extension NeonTheme {
+extension Plus500Theme {
    var darkGrayColor: UIColor {
         get { return UIColor(hex: "111111") }
     }
@@ -96,16 +109,16 @@ extension NeonTheme {
 }
 
 // MARK: animation 
-extension NeonTheme {
+extension Plus500Theme {
     var longAnimationDuration: TimeInterval { return 1.0 }
     
     var mediumAnimationDuration: TimeInterval { return 0.5 }
     
-    var quickAnimationDuration: TimeInterval { return 0.25}
+    var quickAnimationDuration: TimeInterval { return 0.1}
 }
 
 // MARK: padding
-extension NeonTheme {
+extension Plus500Theme {
     var smallPadding: Double { get { return 10.0 } }
     
     var mediumPadding: Double { get { return 20.0 } }
@@ -114,12 +127,12 @@ extension NeonTheme {
 }
 
 // MARK: disabled alpha
-extension NeonTheme {
+extension Plus500Theme {
     var nonActiveAlpha: CGFloat { get { return 0.5 } }
 }
 
 // MARK: styling
-extension NeonTheme {
+extension Plus500Theme {
     
     var defaultButtonHeight: CGFloat { get { return 40.0 } }
     

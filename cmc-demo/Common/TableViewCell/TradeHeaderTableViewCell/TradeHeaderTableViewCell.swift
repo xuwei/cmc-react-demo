@@ -48,15 +48,12 @@ class TradeHeaderTableViewCell: CTableViewCell {
         
         sellTitleLabel.textColor = AppConfig.shared.activeTheme.sellColor
         buyTitleLabel.textColor = AppConfig.shared.activeTheme.buyColor
+
+        let priceInfo = vm.price()
+        applyPriceFont(&self.sellPriceLabel, price: priceInfo.sell ?? 0.0)
+        applyPriceFont(&self.buyPriceLabel, price: priceInfo.buy ?? 0.0)
         
-        sellPriceLabel.text = FormatterUtil.shared.currencyFormat(vm.price().sell ?? 0.0)
-        sellPriceLabel.font = AppConfig.shared.activeTheme.extraLargeFont
-        sellPriceLabel.textColor = AppConfig.shared.activeTheme.profitColor
-        
-        buyPriceLabel.text = FormatterUtil.shared.currencyFormat(vm.price().buy ?? 0.0)
-        buyPriceLabel.font = AppConfig.shared.activeTheme.extraLargeFont
-        buyPriceLabel.textColor = AppConfig.shared.activeTheme.profitColor
-        ViewStylingUtil.shared.applyGradient(buyPriceContainer, bgColors: [AppConfig.shared.activeTheme.backgroundColor, AppConfig.shared.activeTheme.highlightColor])
+        ViewStylingUtil.shared.applyGradient(buyPriceContainer, bgColors: [AppConfig.shared.activeTheme.backgroundColor, AppConfig.shared.activeTheme.highlightColor.withAlphaComponent(AppConfig.shared.activeTheme.nonActiveAlpha)])
         
         // fake fluctuation for the lowest and highest value for now
         let lastPrice = vm.price().last ?? 0.0
@@ -65,14 +62,24 @@ class TradeHeaderTableViewCell: CTableViewCell {
         lowPriceLabel.textColor = AppConfig.shared.activeTheme.lightGrayColor
         let highPriceString = FormatterUtil.shared.currencyFormat(lastPrice*1.2)
         highPriceLabel.text = "H: \(highPriceString)"
-        highPriceLabel.textColor = AppConfig.shared.activeTheme.darkGrayColor
+        highPriceLabel.textColor = AppConfig.shared.activeTheme.lightGrayColor
         
-        marketLabel.text = vm.currency.rawValue
+        marketLabel.text = "\(vm.currency.rawValue)-BTC"
         marketTypeLabel.text = "\(vm.tradeType.rawValue)\nmarket"
         
         spreadLabel.text = "\(vm.calculateSpread())"
         spreadLabel.textColor = AppConfig.shared.activeTheme.textColor
         
     }
-    
+}
+
+extension TradeHeaderTableViewCell {
+    func applyPriceFont(_ label: inout CLabel, price: Double) {
+        label.font = AppConfig.shared.activeTheme.extraLargeFont
+        label.textColor = AppConfig.shared.activeTheme.lightGrayColor
+        let priceString = FormatterUtil.shared.currencyFormat(price)
+        let priceAttributedText = NSMutableAttributedString(string: priceString)
+    priceAttributedText.applyCustomFontsOnDecimals(AppConfig.shared.activeTheme.lightGrayColor, font: AppConfig.shared.activeTheme.mediumFont)
+        label.attributedText = priceAttributedText
+    }
 }

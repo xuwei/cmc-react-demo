@@ -24,6 +24,6 @@ class TradeHeaderViewCellViewModel: CTableViewCellViewModelProtocol {
     
     func calculateSpread()->Double {
         guard let buy = price().buy, let sell = price().sell else { return 0.0 }
-        return abs(buy - sell)
+        return buy - sell
     }
 }

@@ -44,7 +44,7 @@ class CmcServiceManager {
 extension CmcServiceManager {
     
     func blockchainPrice(_ currency: String)-> PriceInfo {
-        let priceInfo = self.blockchainPrices[currency] ?? PriceInfo(_15m: 0, last: 0, buy: 0, sell: 0, symbol: "")
+        let priceInfo = self.blockchainPrices[currency] ?? PriceInfo(_15m: 0, last: 0, buy: 0, sell: 0, symbol: "$")
         return priceInfo
     }
     
@@ -70,7 +70,7 @@ extension CmcServiceManager {
         }
     }
     
-    func savePrices(_ price: Price) {
+    fileprivate func savePrices(_ price: Price) {
         let currencies = Currency.allSupported()
         let mirror = Mirror(reflecting: price)
         for child in mirror.children {

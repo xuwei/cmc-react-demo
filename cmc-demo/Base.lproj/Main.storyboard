@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" id="zdf-Cd-fu4">
                         <barButtonItem key="rightBarButtonItem" image="sparkles" catalog="system" style="plain" id="JJA-zf-iwS">
                             <connections>
-                                <action selector="randomTheme" destination="BYZ-38-t0r" id="She-n0-gBN"/>
+                                <action selector="switchTheme:" destination="BYZ-38-t0r" id="oHW-hk-xtm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

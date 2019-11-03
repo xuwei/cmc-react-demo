@@ -41,13 +41,13 @@ class AmountEntryTableViewCell: CTableViewCell {
         amountTitleLabel.textColor = AppConfig.shared.activeTheme.highlightColor
         amountTitleLabel.text = "Amount (\(vm.symbol()))"
         unitTextField.placeholder = "e.g. 100.00"
-        unitTextField.keyboardType = .numberPad
-        unitTextField.text = String(format:"%.3f", vm.units)
+        unitTextField.keyboardType = .decimalPad
+        unitTextField.text = String(format:"%.2f", vm.units)
         unitTextField.setTextFieldState(.normal)
         unitTextField.font = AppConfig.shared.activeTheme.mediumFont
         amountTextField.placeholder = "e.g. 100.00"
         amountTextField.keyboardType = .decimalPad
-        amountTextField.text = String(format:"%.3f", vm.amount)
+        amountTextField.text = String(format:"%.2f", vm.amount)
         amountTextField.font = AppConfig.shared.activeTheme.mediumFont
         amountTextField.setTextFieldState(.normal)
         

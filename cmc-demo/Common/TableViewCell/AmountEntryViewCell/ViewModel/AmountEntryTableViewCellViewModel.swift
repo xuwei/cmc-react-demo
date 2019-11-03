@@ -11,6 +11,7 @@ import UIKit
 class AmountEntryTableViewCellViewModel: CTableViewCellViewModelProtocol {
     var identifier: String = "AmountEntryTableViewCell"
     var currency: Currency = AppData.shared.currentCurrency
+    var tradeType: TradeType = .buy
     var amount: Double = 0.0
     var units: Double = 0.0
     
@@ -26,8 +27,9 @@ class AmountEntryTableViewCellViewModel: CTableViewCellViewModelProtocol {
             self.units = 0.0
             return
         }
-        
-        self.amount = Double(units) * (price().buy ?? 0.0)
+        let priceInfo = price()
+        let currentPrice = (tradeType == .buy) ? priceInfo.buy ?? 0.0 : priceInfo.sell ?? 0.0
+        self.amount = Double(units) * currentPrice
         self.units = units
     }
     
@@ -38,7 +40,9 @@ class AmountEntryTableViewCellViewModel: CTableViewCellViewModelProtocol {
             return
         }
         
-        self.units = (price().buy ?? 0) / amount
+        let priceInfo = price()
+        let currentPrice = (tradeType == .buy) ? priceInfo.buy ?? 0.0 : priceInfo.sell ?? 0.0
+        self.units = currentPrice / amount
         self.amount = amount
     }
     

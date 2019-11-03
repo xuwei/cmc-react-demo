@@ -13,6 +13,7 @@ class ViewStylingUtil {
     private init() { }
     
     func applyGradient(_ view: UIView, bgColors: [UIColor]) {
+        guard bgColors.isEmpty == false, bgColors.count >= 2 else { return }
         if let gradLayer = view.layer.sublayers?[0], gradLayer is CAGradientLayer {
             gradLayer.removeFromSuperlayer()
         }

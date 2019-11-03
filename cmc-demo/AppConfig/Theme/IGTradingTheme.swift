@@ -9,13 +9,13 @@
 import UIKit
 import Hex
 
-struct DefaultTheme: AppThemeProtocol {
+struct IGTradingTheme: AppThemeProtocol {
 
-    var themeTitle: String { get { return "CMC" } }
+    var themeTitle: String { get { return "IG" } }
 }
 
 // MARK: fonts
-extension DefaultTheme {
+extension IGTradingTheme {
     var defaultFont: UIFont {
          get { return UIFont.systemFont(ofSize: 14.0) }
     }
@@ -34,14 +34,14 @@ extension DefaultTheme {
 }
 
 // MARK: colors
-extension DefaultTheme {
+extension IGTradingTheme {
     
     var keyboardAppearance: UIKeyboardAppearance {
-        get { return .dark }
+        get { return .light }
     }
     
     var statusBarStyle: UIStatusBarStyle {
-        get { return .darkContent }
+        get { return .lightContent }
     }
     
     var barStyle: UIBarStyle {
@@ -53,48 +53,48 @@ extension DefaultTheme {
     }
     
     var altTextColor: UIColor {
-        get { return UIColor.init(hex: "8e8e8e")}
+        get { return UIColor.init(hex: "ffffff")}
     }
     
     var primaryColor: UIColor {
-        get { return UIColor.init(hex: "0dbddc")}
+        get { return UIColor.init(hex: "FF0DBE")}
     }
     
     var backgroundColor: UIColor {
-        get { return UIColor.init(hex: "000000")}
+        get { return UIColor.init(hex: "56386C")}
     }
     
     var altTextBackgroundColor: UIColor {
-        get { return UIColor.init(hex: "292a2b")}
+        get { return UIColor.init(hex: "540CE8")}
     }
     
     var highlightColor: UIColor {
-        get { return UIColor.init(hex: "0dbddc")}
+        get { return UIColor.init(hex: "FFD100")}
     }
     
     var confirmColor: UIColor {
-        get { return UIColor.init(hex: "0dbddc")}
+        get { return UIColor.init(hex: "9900FF")}
     }
     
     var profitColor: UIColor {
-        get { return UIColor.init(hex: "00d50e")}
+        get { return UIColor.init(hex: "78E80C")}
     }
     
     var lossColor: UIColor {
-        get { return UIColor.init(hex: "d60015")}
+        get { return UIColor.init(hex: "FF00AB")}
     }
     
     var buyColor: UIColor {
-        get { return UIColor.init(hex: "03ddff")}
+        get { return UIColor.init(hex: "9900FF")}
     }
     
     var sellColor: UIColor {
-        get { return UIColor.init(hex: "f2991a")}
+        get { return UIColor.init(hex: "4FF09F")}
     }
 }
 
 // MARK: gray system
-extension DefaultTheme {
+extension IGTradingTheme {
    var darkGrayColor: UIColor {
         get { return UIColor(hex: "111111") }
     }
@@ -104,12 +104,12 @@ extension DefaultTheme {
     }
     
     var lightGrayColor: UIColor {
-        get { return UIColor(hex: "efefef") }
+        get { return UIColor(hex: "666666") }
     }
 }
 
 // MARK: animation 
-extension DefaultTheme {
+extension IGTradingTheme {
     var longAnimationDuration: TimeInterval { return 1.0 }
     
     var mediumAnimationDuration: TimeInterval { return 0.5 }
@@ -118,7 +118,7 @@ extension DefaultTheme {
 }
 
 // MARK: padding
-extension DefaultTheme {
+extension IGTradingTheme {
     var smallPadding: Double { get { return 10.0 } }
     
     var mediumPadding: Double { get { return 20.0 } }
@@ -127,12 +127,12 @@ extension DefaultTheme {
 }
 
 // MARK: disabled alpha
-extension DefaultTheme {
+extension IGTradingTheme {
     var nonActiveAlpha: CGFloat { get { return 0.5 } }
 }
 
 // MARK: styling
-extension DefaultTheme {
+extension IGTradingTheme {
     
     var defaultButtonHeight: CGFloat { get { return 40.0 } }
     
