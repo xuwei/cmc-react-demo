@@ -84,6 +84,7 @@
             <connections>
                 <outlet property="cancelButton" destination="4of-Nz-1ev" id="5Ts-bU-VXi"/>
                 <outlet property="confirmButton" destination="LNJ-l7-RVQ" id="q0I-ZK-b9B"/>
+                <outlet property="containerView" destination="RCv-qo-7sb" id="YqR-4m-0Sf"/>
             </connections>
             <point key="canvasLocation" x="105.07246376811595" y="107.8125"/>
         </tableViewCell>

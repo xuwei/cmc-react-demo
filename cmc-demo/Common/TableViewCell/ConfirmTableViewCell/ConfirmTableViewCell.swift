@@ -11,6 +11,7 @@ import NotificationCenter
 
 class ConfirmTableViewCell: CTableViewCell {
 
+    @IBOutlet var containerView: UIView! 
     @IBOutlet var cancelButton: CButton!
     @IBOutlet var confirmButton: CButton!
     

@@ -52,12 +52,13 @@ class BuyViewController: UIViewController, CViewControllerProtocol  {
     
     func setupSubviews() {
         self.confirmViewContainer.backgroundColor = .clear
-        let confirmTableViewCell = UIView.loadFromNibNamed(nibNamed: "ConfirmTableViewCell") ?? UITableViewCell()
-        confirmTableViewCell.translatesAutoresizingMaskIntoConstraints = false
+        let confirmTableViewCell = UIView.loadFromNibNamed(nibNamed: "ConfirmTableViewCell") as! ConfirmTableViewCell
+        guard let view = confirmTableViewCell.containerView else { return }
+        view.translatesAutoresizingMaskIntoConstraints = false
         self.confirmViewContainer.translatesAutoresizingMaskIntoConstraints = false
-        self.confirmViewContainer.addSubview(confirmTableViewCell)
+        self.confirmViewContainer.addSubview(view)
         AutoLayoutUtil.shared.pinToSuperview(view, padding: 0.0)
-        self.confirmTableViewCell = confirmTableViewCell as? ConfirmTableViewCell
+        self.confirmTableViewCell = confirmTableViewCell
     }
     
     func setupUI() {
