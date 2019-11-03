@@ -49,7 +49,7 @@ class AppConfig {
         navBar.tintColor = AppConfig.shared.activeTheme.navTintColor
         navBar.backgroundColor = AppConfig.shared.activeTheme.navBgColor
         navBar.isTranslucent = true
-        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : AppConfig.shared.activeTheme.primaryColor]
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : AppConfig.shared.activeTheme.navTitleColor]
         navBar.barTintColor = AppConfig.shared.activeTheme.navBgColor
     }
 }

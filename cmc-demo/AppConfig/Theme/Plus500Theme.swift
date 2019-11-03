@@ -101,7 +101,7 @@ extension Plus500Theme {
     }
     
     var navTitleColor: UIColor {
-           get { return UIColor.init(hex: "ffffff")}
+           get { return UIColor.init(hex: "2F3E9E")}
        }
 }
 
