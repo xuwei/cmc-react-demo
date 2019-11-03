@@ -254,7 +254,9 @@ extension BuyViewController {
         AppConfig.shared.setupNavBarUI(self)
         self.view.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
         self.tableview.backgroundColor = AppConfig.shared.activeTheme.backgroundColor
+        self.setupUI()
         self.tableview.reloadData()
+        self.view.layoutIfNeeded()
     }
 }
 

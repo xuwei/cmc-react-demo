@@ -45,12 +45,11 @@ class CButton: UIButton {
         let button = self as UIView
         AppConfig.shared.activeTheme.cardStyling(button, borderColor: AppConfig.shared.activeTheme.lightGrayColor)
         self.alpha = self.isEnabled ? 1.0 : AppConfig.shared.activeTheme.nonActiveAlpha
+        updateByType()
     }
     
-    // button style based on button type
-    func setType(_ type: CButtonType) {
-        self.type = type
-        switch type {
+    func updateByType() {
+        switch self.type {
         case .normal:
             self.backgroundColor = AppConfig.shared.activeTheme.mediumGrayColor
             self.titleLabel?.textColor = AppConfig.shared.activeTheme.textColor
@@ -60,6 +59,12 @@ class CButton: UIButton {
             self.titleLabel?.textColor = AppConfig.shared.activeTheme.altTextColor
             self.setTitleColor(AppConfig.shared.activeTheme.textColor, for: .normal)
         }
+    }
+    
+    // button style based on button type
+    func setType(_ type: CButtonType) {
+        self.type = type
+        self.updateByType()
     }
     
     override var isEnabled: Bool {

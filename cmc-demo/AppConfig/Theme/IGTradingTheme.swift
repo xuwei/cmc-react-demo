@@ -53,7 +53,7 @@ extension IGTradingTheme {
     }
     
     var altTextColor: UIColor {
-        get { return UIColor.init(hex: "858586")}
+        get { return UIColor.init(hex: "000000")}
     }
     
     var primaryColor: UIColor {
@@ -61,7 +61,7 @@ extension IGTradingTheme {
     }
     
     var backgroundColor: UIColor {
-        get { return UIColor.init(hex: "FFFFFF")}
+        get { return UIColor.init(hex: "efefef")}
     }
     
     var altTextBackgroundColor: UIColor {
@@ -73,7 +73,7 @@ extension IGTradingTheme {
     }
     
     var confirmColor: UIColor {
-        get { return UIColor.init(hex: "5F9C42")}
+        get { return UIColor.init(hex: "0D94D3")}
     }
     
     var profitColor: UIColor {
@@ -90,6 +90,10 @@ extension IGTradingTheme {
     
     var sellColor: UIColor {
         get { return UIColor.init(hex: "DC3A35")}
+    }
+    
+    var navBgColor: UIColor {
+        get { return UIColor.init(hex: "B72122")}
     }
 }
 

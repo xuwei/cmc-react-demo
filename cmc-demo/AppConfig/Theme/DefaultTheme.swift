@@ -87,9 +87,13 @@ extension DefaultTheme {
     var buyColor: UIColor {
         get { return UIColor.init(hex: "03ddff")}
     }
-    
+//
     var sellColor: UIColor {
         get { return UIColor.init(hex: "f2991a")}
+    }
+    
+    var navBgColor: UIColor {
+        get { return UIColor.init(hex: "000000")}
     }
 }
 

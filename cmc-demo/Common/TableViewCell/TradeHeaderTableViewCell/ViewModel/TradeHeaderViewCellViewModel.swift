@@ -16,7 +16,9 @@ enum TradeType: String {
 class TradeHeaderViewCellViewModel: CTableViewCellViewModelProtocol {
     var identifier: String = "TradeHeaderTableViewCell"
     var currency: Currency = AppData.shared.currentCurrency
+    var buying: String = "BTC" // hardcode BTC for now 
     var tradeType: TradeType = .buy
+    
     
     func price()->PriceInfo {
         return CmcServiceManager.shared.blockchainPrice(AppData.shared.currentCurrency.rawValue)

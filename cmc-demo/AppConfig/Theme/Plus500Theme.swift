@@ -91,6 +91,10 @@ extension Plus500Theme {
     var sellColor: UIColor {
         get { return UIColor.init(hex: "f2991a")}
     }
+    
+    var navBgColor: UIColor {
+        get { return UIColor.init(hex: "000000")}
+    }
 }
 
 // MARK: gray system

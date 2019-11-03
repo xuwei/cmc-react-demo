@@ -10,6 +10,7 @@ import UIKit
 
 class TradeHeaderTableViewCell: CTableViewCell {
     
+    @IBOutlet var containerView: UIView! 
     @IBOutlet var marketLabel: CLabel!
     @IBOutlet var marketTypeLabel: CLabel!
     @IBOutlet var sellPriceLabel: CLabel!
@@ -37,6 +38,7 @@ class TradeHeaderTableViewCell: CTableViewCell {
             self.viewModel = TradeHeaderViewCellViewModel()
         }
         
+        self.containerView.backgroundColor = .clear 
         self.selectionStyle = .none
         self.backgroundColor = .clear
         let vm = self.viewModel as! TradeHeaderViewCellViewModel
@@ -52,6 +54,7 @@ class TradeHeaderTableViewCell: CTableViewCell {
         let priceInfo = vm.price()
         applyPriceFont(&self.sellPriceLabel, price: priceInfo.sell ?? 0.0)
         applyPriceFont(&self.buyPriceLabel, price: priceInfo.buy ?? 0.0)
+    
         
         ViewStylingUtil.shared.applyGradient(buyPriceContainer, bgColors: [AppConfig.shared.activeTheme.backgroundColor, AppConfig.shared.activeTheme.highlightColor.withAlphaComponent(AppConfig.shared.activeTheme.nonActiveAlpha)])
         
@@ -64,7 +67,7 @@ class TradeHeaderTableViewCell: CTableViewCell {
         highPriceLabel.text = "H: \(highPriceString)"
         highPriceLabel.textColor = AppConfig.shared.activeTheme.lightGrayColor
         
-        marketLabel.text = "\(vm.currency.rawValue)-BTC"
+        marketLabel.text = "\(vm.currency.rawValue)-\(vm.buying)"
         marketTypeLabel.text = "\(vm.tradeType.rawValue)\nmarket"
         
         spreadLabel.text = "\(vm.calculateSpread())"
@@ -76,10 +79,11 @@ class TradeHeaderTableViewCell: CTableViewCell {
 extension TradeHeaderTableViewCell {
     func applyPriceFont(_ label: inout CLabel, price: Double) {
         label.font = AppConfig.shared.activeTheme.extraLargeFont
-        label.textColor = AppConfig.shared.activeTheme.lightGrayColor
+        label.textColor = AppConfig.shared.activeTheme.altTextColor
+        label.prevColor = label.textColor
         let priceString = FormatterUtil.shared.currencyFormat(price)
         let priceAttributedText = NSMutableAttributedString(string: priceString)
-    priceAttributedText.applyCustomFontsOnDecimals(AppConfig.shared.activeTheme.lightGrayColor, font: AppConfig.shared.activeTheme.mediumFont)
+    priceAttributedText.applyCustomFontsOnDecimals(AppConfig.shared.activeTheme.altTextColor, font: AppConfig.shared.activeTheme.mediumFont)
         label.attributedText = priceAttributedText
     }
 }

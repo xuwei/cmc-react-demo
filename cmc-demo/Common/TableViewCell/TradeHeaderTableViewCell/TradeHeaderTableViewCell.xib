@@ -166,7 +166,7 @@ Market</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="iqr-VA-ph5" secondAttribute="bottom" id="4fp-SW-rHs"/>
                             <constraint firstItem="iqr-VA-ph5" firstAttribute="top" secondItem="D6T-fn-AGf" secondAttribute="top" id="AQm-lf-xcf"/>
@@ -190,6 +190,7 @@ Market</string>
                 <outlet property="buyPriceContainer" destination="crO-Ys-0Sz" id="OBV-H7-haL"/>
                 <outlet property="buyPriceLabel" destination="uxm-K4-npa" id="Fhb-u6-UJn"/>
                 <outlet property="buyTitleLabel" destination="WLl-qi-7FF" id="zBK-0d-yQN"/>
+                <outlet property="containerView" destination="D6T-fn-AGf" id="O8p-Bw-O1Y"/>
                 <outlet property="highPriceLabel" destination="7S7-1N-dqi" id="aYh-hj-H7H"/>
                 <outlet property="lowPriceLabel" destination="WPo-7K-nGz" id="QEJ-DZ-ltS"/>
                 <outlet property="marketLabel" destination="3FR-fE-pSU" id="qdC-Yf-0Xj"/>

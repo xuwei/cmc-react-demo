@@ -33,6 +33,7 @@ protocol AppThemeProtocol {
     var lossColor: UIColor { get }
     var buyColor: UIColor { get }
     var sellColor: UIColor { get }
+    var navBgColor: UIColor { get }
     
     // MARK: disabled alpha
     var nonActiveAlpha: CGFloat { get } 
